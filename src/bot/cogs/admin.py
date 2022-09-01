@@ -233,6 +233,13 @@ class Admin(commands.Cog):
         data = ext.load_config()
         quizzed = data['quizzed']
 
+    @commands.Cog.listener()
+    async def on_member_remove(self, member: disnake.Member):
+        """Check if member is in the tribes quiz list and remove their ID"""
+
+        data = ext.load_config()
+        quizzed = data["quizzed"]
+
         if member.id in quizzed:
             quizzed.remove(member.id)
 
