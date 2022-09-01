@@ -163,3 +163,4 @@ cython_debug/
 test.py
 src/token.env
 src/bot/data/config.json
+*.json
