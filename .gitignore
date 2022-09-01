@@ -162,3 +162,4 @@ cython_debug/
 # manual addons
 test.py
 src/token.env
+src/bot/data/config.json
