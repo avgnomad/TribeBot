@@ -164,3 +164,4 @@ test.py
 src/token.env
 src/bot/data/config.json
 *.json
+src/bot/data/config.json
