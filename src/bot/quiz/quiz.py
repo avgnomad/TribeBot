@@ -73,9 +73,10 @@ class Quiz:
                 f"**D** - {answers[3].split('-')[1].strip()}",
                 inline=False,
             )
-            embed.set_thumbnail(
-                url=guild.icon.url if guild.icon else disnake.Embed.Empty
+            embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/1013895518340005930/1015244301501997176/SolMad_Thumbnail.png'
+            
             )
+            
 
             # create the answer buttons for the embedded quiz question
             view = self.create_view(answers)
