@@ -1,0 +1,7 @@
+discord.py
+python-dotenv
+boto3
+flake8
+pylint
+black
+disnake

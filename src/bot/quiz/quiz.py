@@ -123,12 +123,14 @@ class Quiz:
         # send final message with calculated tribe and external link for twitter oauth
         # to send tweet about your new tribe
         embed = self.create_complete_quiz_embed(tribe)
+        
+        redirect_url=f"{Config.twitter_oauth_url}?tribe={tribe.name}"
 
         await response.response.edit_message(
             embed=embed,
             components=[
                 disnake.ui.Button(
-                    label="Share on Twitter!", url=Config.twitter_oauth_url
+                    label="Share on Twitter!", url=redirect_url
                 )
             ],
         )

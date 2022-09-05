@@ -2,13 +2,14 @@
 Contains all configuration data for the bot
 """
 import os
+import sys
+import base64
+import json
+import boto3
+from botocore.credentials import InstanceMetadataProvider
+from botocore.utils import InstanceMetadataFetcher
 
-
-class Config:
-
-    # auth tokens for bot gateway
-    bot_token = os.getenv("TOKEN")
-
+class Config:        
     # base default role for new members assigned with
     # tribe role, Copy role ID and paste between ""
     default_role_id = "1013408528330936340"
@@ -21,7 +22,7 @@ class Config:
 
     # twitter oauth url
     # this is the external url that will be attached to the quiz complete message
-    twitter_oauth_url = "https://text.com"
+    twitter_oauth_url = "https://solmads.io/front-api/twit"
 
     # configure this section for the tribes
     # add the ID for each tribes role by replacing the 0000s
